@@ -18,6 +18,9 @@ int main() {
     float carta1area , carta2area;
     float carta1PIB , carta2PIB;
     int carta1pontos_turisticos , carta2pontos_turisticos;
+    char carta1estado[23];
+    char carta2estado[23];
+
 
     // Cadastro das Cartas:
     // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
@@ -28,7 +31,10 @@ int main() {
  
     printf("Digite o nome da Cidade:\n");
     fgets(carta1nome , sizeof(carta1nome), stdin);
-   
+
+
+    printf("Digite o Estado:");
+    fgets(carta1estado , sizeof(carta1estado), stdin);
 
     printf("Digite o codigo-Comezando com a inicial da cidade e os numeros desde 01 ate 04 ex:A01:\n");
     scanf("%s", &carta1codigo );
@@ -56,6 +62,9 @@ int main() {
     fgets(carta2nome , sizeof(carta2nome), stdin);
     carta2nome[strcspn(carta2nome,"\n")];
 
+      printf("Digite o Estado:");
+    fgets(carta2estado , sizeof(carta2estado), stdin);
+
     printf("Digite o codigo-Comezando com a inicial da cidade e os numeros desde 01 ate 04 ex:A01:\n");
     scanf("%s", &carta2codigo);
 
@@ -82,19 +91,21 @@ int main() {
     printf("===Exibindo cartas cadastradas===\n");
 
     getchar();
-    printf("==Carta 1==\n");
-    printf("==Cidade: %s", carta1nome);
-    printf("Codigo: %s \n", carta1codigo);
+    printf("        ESTADO: %s", carta1estado);
+    printf(" ==Cidade: %s", carta1nome);
+    printf("*Codigo: %s \n", carta1codigo);
     printf("-População = %ld\n", carta1populacao);
-    printf("-PIB = %f\n ", carta1PIB);
-    printf("-Area(m²) = %f\n", carta1area);
+    printf("-PIB = %.2f\n ", carta1PIB);
+    printf("-Area(m²) = %.2f\n", carta1area);
     printf("-Pontos Turisticos = %d\n", carta1pontos_turisticos);
 
-    printf("==Carta 2==\n");
-    printf("==Cidade: %s---Codigo: %s ==\n", carta2nome, carta2codigo);
+    printf("          ==Carta 2==\n");
+    printf("      ESTADO: %s    ", carta2estado);
+    printf("==Cidade: %s",carta2nome);
+    printf("*Codigo: %s\n" , carta2codigo);
     printf("-População = %ld\n",carta2populacao);
-    printf("-PIB = %f\n ",carta2PIB);
-    printf("-Area(m²) = %f\n",carta2area);
+    printf("-PIB = %.2f\n ",carta2PIB);
+    printf("-Area(m²) = %.2f\n",carta2area);
     printf("-Pontos Turisticos = %d\n",carta2pontos_turisticos);
 
     return 0;
