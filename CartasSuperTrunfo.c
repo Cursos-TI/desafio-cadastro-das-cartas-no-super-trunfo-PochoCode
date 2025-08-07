@@ -152,7 +152,7 @@ int main() {
 
 
 
-    // Comparando carta 1 e carta 2
+    /* Comparando carta 1 e carta 2
 
     printf("Comparando as cartas:\n");
     
@@ -176,7 +176,32 @@ int main() {
     printf("PIB percapita:%d\n", resultado);
 
     resultado = Super_poder1 > Super_poder2;
-    printf("Super Poder:%d", resultado);
+    printf("Super Poder:%d \n", resultado);*/
+
+
+    //Comparando um campo especifico das cartas
+
+    printf("Comparando as cartas\n");
+
+    //Usando if para determinar qual valor é maior 
+    
+   /* if(carta1populacao > carta2populacao){
+        printf("Carta %s ganhou\n  %s:População = %d\n %s:População = %d\n",
+             carta1codigo,carta1nome,carta1populacao,carta2nome,carta2populacao);
+    } else {
+        printf("Carta %s ganhou\n  %s:População = %d\n %s:População = %d\n",
+            carta2codigo,carta2nome,carta2populacao,carta1nome,carta1populacao);
+    }*/
+
+    // Comparando outro atributo com a variavel float
+    if(carta1populacao > carta2populacao){
+        printf("Carta %s ganhou\n   %s:Area = %2.f\n  %s:Area = %2.f\n",
+             carta1codigo,carta1nome,carta1area,carta2nome,carta2area);
+    } else {
+        printf("Carta %s ganhou\n  %s:Area = %2.f\n  %s:Area = %2.f\n",
+            carta2codigo,carta2nome,carta2area,carta1nome,carta1area);
+    }
+
 
 
     return 0;
