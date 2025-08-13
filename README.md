@@ -58,7 +58,7 @@ Digite o número de pontos turísticos: 25
 === Cartas cadastradas com sucesso! ===
 
 CONCEITOS APLICADOS:
-- Estruturas (struct)
+
 - Entrada e saída de dados (scanf, printf, fgets)
 - Controle de fluxo com switch case
 - Variáveis e tipos de dados básicos

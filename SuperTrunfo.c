@@ -16,32 +16,25 @@ int main() {
     char carta1estado[23];
     char carta2estado[23];
     int resultado;
-    // Obtendo e inicializando as variaveis Densidade populacional e PIB percapita
+   
+//variaveis Densidade populacional e PIB percapita
 
-    float Densidadepopulacional1 = carta1populacao/carta1area;
-    float PIBpercapita1 = carta1PIB/carta1populacao;
+    float Densidadepopulacional1;
+    float PIBpercapita1;
 
-    // Declarando e inicializando variavel super poder
-    float Super_poder1 =carta1populacao + carta1area;
-    Super_poder1 += carta1PIB;
-    Super_poder1 += carta1pontos_turisticos;
-    Super_poder1 += PIBpercapita1;
-    Super_poder1 -= Densidadepopulacional1;
-
-   //Calculando a densidade populaconal 2
-    float Densidadepopulacional2 = carta2populacao/carta2area ;
-
-    //Calculando o PIB per capita 2
-    float PIBpercapita2 = carta2PIB/carta2populacao;
-
-   //Declarando a variavel super poder da carta 2
-   float Super_poder2 =carta2populacao + carta2area;
-   Super_poder2 += carta2PIB;
-   Super_poder2 += carta2pontos_turisticos;
-   Super_poder2 += PIBpercapita2;
-   Super_poder2 -= Densidadepopulacional2;
+    // Declarando variavel super poder
+    float Super_poder1 ;
     
 
+   // densidade populaconal 2
+    float Densidadepopulacional2  ;
+
+    // PIB per capita 2
+    float PIBpercapita2;
+
+   //variavel super poder da carta 2
+   float Super_poder2;
+   
     //Menu inicial do jogo]
     printf("  ===Super Trunfo===\n");
     printf("==Bemvindo ao Super Trunfo Cidades!!!==\n");
@@ -117,7 +110,11 @@ int main() {
 
     printf("Digite a quantidade de pontos turisticos da cidade:\n");
     scanf("%d", &carta2pontos_turisticos);
+   
 
+   
+    
+    printf("Cartas cadastradas com exito\n");
     
      break;
 
@@ -127,7 +124,7 @@ int main() {
     printf("1.Serão comparadas as cartas cadastradas pelos usuarios\n  ");
     printf("2.Serão comparadas as cartas por suas diferentes propriedades as de maior propriedade ganham\n");
     printf("3.A carta de maior densidade populacional perde\n");
-    break;
+    exit(0);
     case 3 :
     printf("Saindo do programa\n");
     exit(0);
@@ -326,7 +323,7 @@ int main() {
     printf("===Exibindo cartas cadastradas===\n");
 
     getchar();
-    printf("          ==Carta 2==\n");
+    printf("          ==Carta 1==\n");
     printf("        ESTADO: %s", carta1estado);
     printf("==Cidade: %s", carta1nome);
     printf("*Codigo: %s \n", carta1codigo);
@@ -335,11 +332,21 @@ int main() {
     printf("-Area(m²) = %.2f\n", carta1area);
     printf("-Pontos Turisticos = %d\n", carta1pontos_turisticos);
    
+    // Obtendo e inicializando as variaveis Densidade populacional e PIB percapita
 
+    float Densidadepopulacional1 = carta1populacao/carta1area;
+    float PIBpercapita1 = carta1PIB/carta1populacao;
+
+    
     // Exibindo o PIB percapita e a densiddade populacional da carta 1
     printf("-PIB per capita:%.2f\n", PIBpercapita1);
     printf("-Densidade populacional:%.2f\n", Densidadepopulacional1);
-
+   // Declarando e inicializando variavel super poder
+    float Super_poder1 =carta1populacao + carta1area;
+    Super_poder1 += carta1PIB;
+    Super_poder1 += carta1pontos_turisticos;
+    Super_poder1 += PIBpercapita1;
+    Super_poder1 -= Densidadepopulacional1;
    // exibindo super poder
     printf("-Super Poder: %.2f\n", Super_poder1);
 
@@ -355,10 +362,23 @@ int main() {
     printf("-PIB = %.2f\n ",carta2PIB);
     printf("-Area(m²) = %.2f\n",carta2area);
     printf("-Pontos Turisticos = %d\n",carta2pontos_turisticos);
+    //Calculando a densidade populaconal 2
+    float Densidadepopulacional2 = carta2populacao/carta2area ;
+
+    //Calculando o PIB per capita 2
+    float PIBpercapita2 = carta2PIB/carta2populacao;
+
+   
     printf("PIB per capita: %.2f\n", PIBpercapita2);
     printf("Densidade populacional:%.2f\n", Densidadepopulacional2);
+    //Declarando a variavel super poder da carta 2
+   float Super_poder2 =carta2populacao + carta2area;
+   Super_poder2 += carta2PIB;
+   Super_poder2 += carta2pontos_turisticos;
+   Super_poder2 += PIBpercapita2;
+   Super_poder2 -= Densidadepopulacional2;
      // exibindo super poder
-    printf("-Super Poder: %.2f\n", Super_poder1);
+    printf("-Super Poder: %.2f\n", Super_poder2);
      exit(0);
 
       //saindo do jogo
