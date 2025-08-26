@@ -23,6 +23,7 @@ ESTRUTURA DE ARQUIVOS:
 CartasSupertrunfo.c -> Codigo-fonte secundario
 SuperTrunfo.c  -> Código-fonte principal
 README.md      -> Documento de descrição do projeto
+SuperTrunfoB -> Codigo secundario em desenvolvimento para atualizar o jogo
 
 COMO COMPILAR E EXECUTAR:
 Linux/MacOS:
@@ -56,6 +57,11 @@ Digite o PIB: 220.5
 Digite o número de pontos turísticos: 25
 
 === Cartas cadastradas com sucesso! ===
+
+===Menu de jogo===
+Escolha com cual propriedade atacar
+1.Area
+2.População...
 
 CONCEITOS APLICADOS:
 
